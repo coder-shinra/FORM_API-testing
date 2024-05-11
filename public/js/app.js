@@ -28,17 +28,6 @@ contactForm.addEventListener("submit", (e) => {
       console.log(error);
       alert(error);
     }
-
-    // if (xhr.responseText == "success") {
-    //   alert("Email Sent Successfuly");
-    //   Name.value = "";
-    //   email.value = "";
-    //   subject.value = "";
-    //   message.value = "";
-    // }
-    // else {
-    //   alert("Oops !! Something went wrong.");
-    // }
   };
 
   xhr.send(JSON.stringify(formData));
