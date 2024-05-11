@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 
@@ -20,7 +22,7 @@ app.post("/", (req, res) => {
     service: "gmail",
     auth: {
       user: "ligertechnovision@gmail.com",
-      pass: "taztoqbsjppazpxs",
+      pass: process.env.Password,
     },
   });
 
